@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+  <!-- Container -->
+  <div class="container">
+  
+  <!-- HTML Code -->
+  <marquee class="GeneratedMarquee" direction="left" scrollamount="4" behavior="scroll">
+    Your public IP Address is <span id="main-ip"></span> from <span id="main-location"></span> (<span id="main-isp"></span>) at <span id="main-timezone"></span>
+    See your location on the <span id="get-location" onclick="getLocation();">map</span>
+  </marquee>
+  
+    <!-- Input form -->
+    <div class="input-form">
+        <h1>IP Address Tracker</h1>
+        <form>
+            <input type="search" id="user-input" placeholder="Search for any IP address or domain"/>
+            <button type="submit" id="button" title="button"><img src="images/icon-arrow.svg" alt="arrow"></button>   
+        </form>
+    </div>
+    
+    <!-- Input display of tracking details-->
+    <div class="display-view">
+        <div class="display_unit bar">
+            <h4 id="" >IP ADDRESS</h4>
+            <p id="user-ip"><p>
+        </div>
+        
+        <div class="display_unit bar">
+            <h4 id="" >LOCATION</h4>
+            <p id="user-location"><p>
+        </div>
+
+        <div class="display_unit bar">
+            <h4 id="" >TIME ZONE</h4>
+            <p id="user-timezone"><p>
+        </div>
+
+        <div class="display_unit">
+            <h4 id="" >ISP</h4>
+            <p id="user-isp"><p>
+        </div>
+    </div>
+    
+    <div id="map"></div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.github.com/morebymafe">morebymafe</a>.
+    </div>
+  </div>
+
+  
+  <script type="text/javascript" src="tracker.js">
+  
+  </script>
+  
+</body>
+</html>

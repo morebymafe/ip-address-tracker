@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>IP Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+     <style>
+        .container{
+            height: 100%;
+        }
+        #map{ height: 500px; }
+     </style>
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Input form -->
+        <div class="ip-form">
+            <h1>IP Address Tracker</h1>
+            <form>
+                <input type="search" id="number" placeholder="Search the IP address" value=""/>
+                <button type="submit" id="submit"> <img src="images/icon-arrow.svg"></button>   
+            </form>
+        </div>
+        
+        <!-- Input display of tracking details-->
+        <div class="display" id="">
+            <div class="display_unit">
+                <h4 id="" >IP ADDRESS</h4>
+                <p id="ip-address"><p>
+            </div>
+            
+            <div class="display_unit">
+                <h4 id="" >LOCATION</h4>
+                <p id="location"><p>
+            </div>
+
+            <div class="display_unit">
+                <h4 id="" >TIME ZONE</h4>
+                <p id="timezone"><p>
+            </div>
+
+            <div class="display_unit">
+                <h4 id="" >ISP</h4>
+                <p id="isp"><p>
+            </div>
+
+        </div>
+        
+        <div id="map"></div>
+
+    </div>
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    {
+    "ip": "196.11.184.2",
+    "location": {
+        "country": "NG",
+        "region": "Lagos State",
+        "city": "Oroke",
+        "lat": 6.43333,
+        "lng": 3.41667,
+        "postalCode": "",
+        "timezone": "+01:00",
+        "geonameId": 2325698
+    },
+    "as": {
+        "asn": 37657,
+        "name": "LASG-AS",
+        "route": "196.11.184.0/22",
+        "domain": "lagosstate.gov.ng",
+        "type": ""
+    },
+    "isp": "Lagos State Government"
+    </script>
+</body>
+</html>

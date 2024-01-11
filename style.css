@@ -1,0 +1,70 @@
+body {
+  margin: auto;
+  background-image: url('./images/pattern-bg-desktop.png');
+  background-size: cover;
+
+}
+
+.container{
+  font-family: Roboto;
+  text-align: center;
+}
+
+.GeneratedMarquee {
+  font-family:Roboto, sans-serif;
+  font-size:16px;
+  line-height:1.3em;
+  color:#000000;
+  padding:.5em;
+  background-color: white;
+}
+
+.input-form{
+  z-index: 5;
+  color: white;
+}
+input[type='search']{
+  width: 350px;
+  height: 30px;
+  padding: 1.5em;
+  font-family: Roboto;
+  border: none;
+  border-radius: 4px;
+}
+button{
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  background-size: cover;
+  border: none;
+  margin-left: -3.2em;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+input:focus{
+  outline: none;
+}
+
+.display-view{
+  display: flex;
+  flex: row nowrap;
+  justify-content: space-around;
+  background-color: white;
+  width: 70%;
+  padding: 2em;
+  margin: 1em 10em -1em 10em;
+  border-radius: 12px;
+  z-index: 10;
+}
+div[class~=bar]{
+  border-color: black;
+  border-left: 5px;
+  padding-left: 10px;
+}
+
+#map{ 
+  height: 440px;
+  z-index: 0; 
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(337, 100%, 20%); }
